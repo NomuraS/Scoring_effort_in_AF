@@ -1,9 +1,9 @@
 digraph  model{
-奨学金拡充->奨学金拡充00->費用問題
-授業料減->授業料減00->費用問題
-予算確保->予算確保00->費用問題
-無償化->無償化00->費用問題->環境構築
-魅力増加->魅力増加00->環境構築->環境構築00->教育支援->教育支援00->生活安定
-代替資源->代替資源00->原発撤去->原発再稼働
-安全原発->安全原発00->原発再稼働->原発再稼働00->動力政策
-脱炭素->脱炭素00->動力政策->動力政策00->生活安定}
+syougakukin_kakuju->syougakukin_kakuju00->hiyou_mondai
+jugyou_gen->jugyou_gen00->hiyou_mondai
+yosan_kakuho->yosan_kakuho00->hiyou_mondai
+musyou_ka->musyou_ka00->hiyou_mondai->kankyou_kyoutiku
+miryoku_gen->miryoku_gen00->kankyou_kyoutiku->kankyou_kyoutiku00->kyouiku_sien->kyouiku_sien00->seikatu_antei
+daitai_shigen->daitai_shigen00->genpatu_tekkyo->genpatu_saikadou
+anzen_genpatu->anzen_genpatu00->genpatu_saikadou->genpatu_saikadou00->douryoku_seisaku
+datu_tanso->datu_tanso00->douryoku_seisaku->douryoku_seisaku00->seikatu_antei}

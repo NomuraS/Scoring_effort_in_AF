@@ -110,15 +110,34 @@ sample_exbaf_ev a =  case a of
 
 sample_exbaf = ExBAFe  sample_exbaf_ar sample_exbaf_att sample_exbaf_ssup sample_exbaf_ev
 
-	
-				
-					
-						
-					
-				
-			
-				
-				
-				
-					  
+sample_exbaf2_ar =["seikatu_antei","douryoku_seisaku","datu_tanso","genpatu_saikadou","anzen_genpatu","genpatu_tekkyo",	"daitai_shigen","kyouiku_sien","kankyou_kyoutiku","miryoku_gen","hiyou_mondai","syougakukin_kakuju","jugyou_gen","musyou_ka","yosan_kakuho"]
+sample_exbaf2_att = [
+					("genpatu_tekkyo","genpatu_saikadou"),
+					("hiyou_mondai","kankyou_kyoutiku")
+					]
 
+sample_exbaf2_ssup = [(["miryoku_gen"],"kankyou_kyoutiku"),(["kankyou_kyoutiku"],"kyouiku_sien") ,(["kyouiku_sien"],"seikatu_antei"),
+					(["syougakukin_kakuju","jugyou_gen"],"hiyou_mondai"),
+					(["yosan_kakuho","musyou_ka"],"hiyou_mondai"),
+					(["daitai_shigen"],"genpatu_tekkyo"),(["anzen_genpatu"],"genpatu_saikadou"),(["genpatu_saikadou"],"douryoku_seisaku"),(["datu_tanso"],"douryoku_seisaku"),(["douryoku_seisaku"],"seikatu_antei")
+					  ]
+
+sample_exbaf2_ev a =  case a of 
+	"seikatu_antei"->0
+	"douryoku_seisaku"->2
+	"datu_tanso"->1
+	"genpatu_saikadou"->2
+	"anzen_genpatu"->3
+	"genpatu_tekkyo"->2
+	"daitai_shigen"->3
+	"kyouiku_sien"->0
+	"kankyou_kyoutiku"->2
+	"miryoku_gen"->3
+	"hiyou_mondai"->1
+	"syougakukin_kakuju"->1
+	"jugyou_gen"->2
+	"musyou_ka"->1
+	"yosan_kakuho"->1
+	_->0
+
+sample_exbaf2 = ExBAFe  sample_exbaf2_ar sample_exbaf2_att sample_exbaf2_ssup sample_exbaf2_ev
